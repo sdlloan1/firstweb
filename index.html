@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubh Dhan Lakshmi (SDL) - India's Friendly Loan Platform</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --background: #E9EAF2;
+            --foreground: #1D2434;
+            --card: #E9EAF2;
+            --card-foreground: #1D2434;
+            --popover: #E9EAF2;
+            --popover-foreground: #1D2434;
+            --primary: #FF6929;
+            --primary-foreground: #FFFFFF;
+            --secondary: #DADDE7;
+            --secondary-foreground: #1D2434;
+            --muted: #D5D7E2;
+            --muted-foreground: #636C83;
+            --accent: #FF6333;
+            --accent-foreground: #FFFFFF;
+            --destructive: #E2473C;
+            --destructive-foreground: #FAFAFA;
+            --border: #D6D8E1;
+            --input: #DBDDE6;
+            --ring: #FF6929;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--foreground);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Smooth Custom Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.15; transform: scale(1); }
+            50% { opacity: 0.25; transform: scale(1.05); }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .animate-float {
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .animate-glow {
+            animation: pulseGlow 4s ease-in-out infinite;
+        }
+
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-[#FF6929] selection:text-white">
+
+    <!-- Top Navigation Header -->
+    <header class="w-full max-w-7xl mx-auto px-6 py-5 flex items-center justify-between opacity-0 animate-fade-in-up">
+        <div class="flex items-center gap-3">
+            <!-- Simulated App Logo Box using theme colors -->
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FF6929] to-[#FF6333] flex items-center justify-center text-white font-bold text-lg shadow-md shadow-[#FF6929]/20">
+                SDL
+            </div>
+            <span class="font-bold text-xl tracking-tight text-[#1D2434]">Shubh Dhan Lakshmi</span>
+        </div>
+        
+        <div class="flex items-center gap-4">
+            <a href="https://shubhdhanlakshmi-beta-version.base44.app/login" 
+               class="px-5 py-2.5 rounded-xl font-medium text-[#1D2434] hover:bg-[#DADDE7] transition-all duration-200">
+                Login
+            </a>
+            <a href="https://shubhdhanlakshmi-beta-version.base44.app/register" 
+               class="px-5 py-2.5 rounded-xl font-medium bg-[#FF6929] text-white hover:bg-[#FF6333] transition-all duration-200 shadow-lg shadow-[#FF6929]/20 hover:scale-[1.02]">
+                Create account
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Hero Body section -->
+    <main class="w-full max-w-7xl mx-auto px-6 py-12 my-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: Marketing Message Copy -->
+        <div class="lg:col-span-7 flex flex-col justify-center space-y-8 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#DADDE7] text-[#1D2434] text-xs font-semibold self-center lg:self-start opacity-0 animate-fade-in-up">
+                <span class="flex h-2 w-2 rounded-full bg-[#FF6929]"></span>
+                India's No. 1 Friendly Loan Platform
+            </div>
+
+            <div class="space-y-4">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-[#1D2434] leading-[1.1] tracking-tight opacity-0 animate-fade-in-up delay-100">
+                    Friendly Loans, <br class="hidden sm:inline" />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6929] to-[#FF6333]">Simplified</span>
+                </h1>
+                <p class="text-base sm:text-lg text-[#636C83] max-w-xl mx-auto lg:mx-0 opacity-0 animate-fade-in-up delay-200">
+                    SDL is built entirely on trust. Borrow what you need urgently, repay smoothly on your next salary date, and enjoy a completely hidden-charge-free community.
+                </p>
+            </div>
+
+            <!-- Main Interactive Conversion Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2 opacity-0 animate-fade-in-up delay-300">
+                <a href="https://shubhdhanlakshmi-beta-version.base44.app/register" 
+                   class="w-full sm:w-auto px-8 py-4 bg-[#FF6929] hover:bg-[#FF6333] text-white font-bold rounded-2xl shadow-xl shadow-[#FF6929]/20 transition-all duration-300 text-center flex items-center justify-center gap-2 group hover:scale-[1.02]">
+                    <span>Create one</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1"></i>
+                </a>
+                <a href="https://shubhdhanlakshmi-beta-version.base44.app/login" 
+                   class="w-full sm:w-auto px-8 py-4 bg-[#DADDE7] hover:bg-[#D5D7E2] text-[#1D2434] font-bold rounded-2xl transition-all duration-300 text-center border border-[#D6D8E1]">
+                    Login to Portal
+                </a>
+            </div>
+
+            <!-- Simplified Key Trust Highlights -->
+            <div class="grid grid-cols-3 gap-4 pt-6 border-t border-[#D6D8E1] opacity-0 animate-fade-in-up delay-300">
+                <div class="space-y-1">
+                    <div class="text-xl sm:text-2xl font-black text-[#FF6929]">Transparent</div>
+                    <div class="text-xs font-medium text-[#636C83]">Zero hidden charges</div>
+                </div>
+                <div class="space-y-1">
+                    <div class="text-xl sm:text-2xl font-black text-[#FF6929]">24 Hours</div>
+                    <div class="text-xs font-medium text-[#636C83]">Fast KYC approval</div>
+                </div>
+                <div class="space-y-1">
+                    <div class="text-xl sm:text-2xl font-black text-[#FF6929]">1% Monthly</div>
+                    <div class="text-xs font-medium text-[#636C83]">Wallet growth bonus</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Visual Component Cards -->
+        <div class="lg:col-span-5 relative flex items-center justify-center lg:justify-end">
+            <!-- Ambient Glow Background Graphics -->
+            <div class="absolute w-72 h-72 rounded-full bg-[#FF6929] blur-3xl -top-12 -left-12 opacity-0 animate-glow"></div>
+            <div class="absolute w-64 h-64 rounded-full bg-[#FF6333] blur-3xl -bottom-12 -right-12 opacity-0 animate-glow delay-200"></div>
+
+            <!-- Main Feature Showcase Wrapper Container -->
+            <div class="relative w-full max-w-md space-y-4 opacity-0 animate-fade-in-up delay-200">
+                
+                <!-- Benefit Highlight Box 1 -->
+                <div class="bg-[#E9EAF2] border border-[#D6D8E1] p-5 rounded-2xl shadow-sm flex items-start gap-4 transition-all duration-300 hover:translate-x-2 hover:bg-white/40">
+                    <div class="p-3 rounded-xl bg-white/80 text-[#FF6929] shadow-sm">
+                        <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-base text-[#1D2434] mb-1">Transparent Payment System</h3>
+                        <p class="text-xs text-[#636C83] leading-relaxed">Borrow exactly ₹1,000 and return a flat ₹1,200 right on your payday. Limits grow automatically based on timely repayments.</p>
+                    </div>
+                </div>
+
+                <!-- Benefit Highlight Box 2 -->
+                <div class="bg-[#E9EAF2] border border-[#D6D8E1] p-5 rounded-2xl shadow-sm flex items-start gap-4 transition-all duration-300 hover:translate-x-2 hover:bg-white/40 animate-float">
+                    <div class="p-3 rounded-xl bg-white/80 text-[#FF6929] shadow-sm">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-base text-[#1D2434] mb-1">Built on Trust & Community</h3>
+                        <p class="text-xs text-[#636C83] leading-relaxed">A completely peer-supported network of verified borrowers and secure KYC pathways ensuring trust indicators are met safely.</p>
+                    </div>
+                </div>
+
+                <!-- Benefit Highlight Box 3 -->
+                <div class="bg-[#E9EAF2] border border-[#D6D8E1] p-5 rounded-2xl shadow-sm flex items-start gap-4 transition-all duration-300 hover:translate-x-2 hover:bg-white/40">
+                    <div class="p-3 rounded-xl bg-white/80 text-[#FF6929] shadow-sm">
+                        <i data-lucide="wallet" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-base text-[#1D2434] mb-1">Earn Referral Rewards</h3>
+                        <p class="text-xs text-[#636C83] leading-relaxed">Invite peer connections to receive 1% of their entire loan pool straight to an interest-earning savings account wallet monthly.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="w-full max-w-7xl mx-auto px-6 py-6 border-t border-[#D6D8E1] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium text-[#636C83]">
+        <p>&copy; 2026 Shubh Dhan Lakshmi (SDL). All community trust rights reserved.</p>
+        <div class="flex items-center gap-6">
+            <a href="#" class="hover:text-[#1D2434] transition-colors">Privacy Policy</a>
+            <a href="#" class="hover:text-[#1D2434] transition-colors">Terms of Service</a>
+            <a href="#" class="hover:text-[#1D2434] transition-colors">Contact Support</a>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
