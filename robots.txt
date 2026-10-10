@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shubhdhanlakshmi.in/sitemap.xml
+Sitemap: https://shubhdhanlakshmi.com/sitemap.xml
